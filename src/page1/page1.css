@@ -1,0 +1,109 @@
+/* 둥둥 오르내리는 효과 */
+@keyframes logo-hover {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.logo {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  margin-top: 200px;
+  animation-name: logo-hover;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.logo__thumb {
+  position: relative;
+}
+
+/* 로고 아래 그림자 */
+.logo__thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 10%;
+  background-color: black;
+  border-radius: 50%;
+}
+.logo__thumb::after {
+  left: calc(50% - 50px);
+  bottom: -24px;
+  width: 100px;
+}
+
+/* 짙고 옅어지는 애니메이션 */
+@keyframes logo-shadow {
+  from {
+    opacity: 0.08;
+  }
+  to {
+    opacity: 0.24;
+  }
+}
+
+.logo__thumb::after {
+  animation-name: logo-shadow;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/*url*/
+
+.inputUrl {
+  width: 780px;
+  height: 50px;
+  outline: none;
+
+  margin: auto;
+  margin-top: 70px;
+  text-align: left;
+  display: flex;
+
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-position: 13px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 20px;
+
+  padding: 5px 5px;
+  text-indent: 70px;
+}
+
+.inputUrl:focus {
+  border-color: black;
+}
+
+.submit {
+  text-align: center;
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(97, 164, 93);
+  color: azure;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
