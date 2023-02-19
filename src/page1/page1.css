@@ -83,3 +83,27 @@
 .inputUrl:focus {
   border-color: black;
 }
+
+.submit {
+  text-align: center;
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(97, 164, 93);
+  color: azure;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
