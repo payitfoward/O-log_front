@@ -1,6 +1,7 @@
 import React from "react";
 import "./page2.css";
-import logo from "./logo2.png";
+import logo from "./logo3.png";
+import { Link } from "react-router-dom";
 
 export default function Page2() {
   return (
@@ -59,7 +60,10 @@ export default function Page2() {
             4368명→1만 4949명→1만 2515명→1만 1436명→1만 718명→1만 274명으로, 일
             평균 1만 1347명이다.
           </div>
-          <button className="button">확인</button>
+          <button className="button">
+            <Link to={"/"} className="link"></Link>
+            확인
+          </button>
         </div>
         <div className="side">
           <img src={logo} alt="" className="img" />

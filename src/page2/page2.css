@@ -32,7 +32,7 @@
   display: flex;
   margin: 0 auto;
   margin-bottom: 20px;
-  height: 100px;
+  height: 150px;
   margin-top: 70px;
 }
 
@@ -46,6 +46,7 @@
   column-count: 2;
   column-gap: 40px;
   font-size: 16px;
+  flex: 2;
 }
 
 .side__decs {
@@ -74,4 +75,9 @@
   color: azure;
   align-items: center;
   justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
 }
