@@ -2,19 +2,60 @@ import React from "react";
 import "./page2.css";
 import logo from "./logo3.png";
 import { Link } from "react-router-dom";
+import TopBar from "../component/topbar/TopBar";
+import facebook from "./facebook.png";
+import home from "./home.png";
+import instar from "./instargram.png";
+import tistory from "./tistory.png";
+import retry from "./retry.png";
 
 export default function Page2() {
   return (
     <>
+      <TopBar />
       <div className="page2">
+        <div className="side">
+          <div className="category">SNS 플랫폼 종류</div>
+          <div className="SNS">
+            <img src={instar} alt="" />
+            인스타그램
+          </div>
+          <div className="SNS">
+            <img src={facebook} alt="" />
+            페이스북
+          </div>
+          <div className="SNS">
+            <img src={tistory} alt="" />
+            티스토리
+          </div>
+          <hr className="side__bar"></hr>
+          <div className="SNS">
+            <img src={home} alt="" />
+            메인 화면으로
+          </div>
+          <div className="SNS">
+            <img src={retry} alt="" />
+            다시 생성하기
+          </div>
+          <div className="side__plus">
+            <span>다른 리뷰 사이트를 이용해보세요!</span>
+            <span>네이버 플레이스 이외의 </span>
+            <span>숨고,카카오맵, 구글맵, 배달의 민족 등 </span>
+            <span>다양한 리뷰 URL을 </span>
+            <span>입력하시면 더욱</span>
+            <span>다양한 게시글을 생성할 수 있습니다.</span>
+          </div>
+        </div>
         <div className="main">
-          <div className="title">제목</div>
+          <span className="title">추천제목 | </span>
+          <span className="date">생성날짜 |</span>
           <hr className="bar"></hr>
           <div className="desc">
             전기사에게 택배와 세탁물 심부름을 시키고 명절이나 휴가 중에도 운전을
             시키다 해임된 기관장이 불복 소송을 제기했지만 졌습니다.
             서울행정법원은 과학기술정보통신부 산하 전직 기관장 김 모 씨가 해임
             처분을 취소해달라며 장관을 상대로 낸 소송에서 원고 패소로
+            <img src={logo} alt="" className="img2" />
             판결했습니다. 재판부는 김 씨가 직원들에게 반복적으로 개인 심부름
             같은 사적인 용무를 지시하면서도 자신의 행위가 직장 내 괴롭힘일 수
             있다는 문제의식이 없었다며 해임 처분은 정당하다고 판단했습니다. 앞서
@@ -23,6 +64,16 @@ export default function Page2() {
             1년 만에 해임됐습니다. 김 씨의 징계 사유는 16가지로, 운전기사에게
             9차례 개인 의류를 세탁소에 맡기고 찾아오게 시키고, 택배를 받거나
             이삿짐을 옮길 때도 동원한 것으로 조사됐습니다. 실내마스크 착용 의무
+            해제에도 코로나19 유행의 감소세가 계속되면서 19일 확진자가 1만명
+            대로 줄었다. 중앙방역대책본부는 이날 0시 기준 코로나19 확진자가 1만
+            274명 증가했다고 밝혔다. 누적 확진자는 3042만 9571명이 됐다. 이날
+            신규 확진자 수는 1주 전인 지난 12일(1만 2042명)보다 1768명, 2주 전인
+            지난 5일(1만 4011명)보다 3737명 각각 적었다. 일요일 발표 기준으로는
+            지난해 7월 3일(1만 36명) 이후 33주{" "}
+            <img src={logo} alt="" className="img2" />
+            만에 가장 적은 기록이다. 지난 13일부터 이날까지 일주일간 하루 신규
+            확진자 수는 5168명→1만 4368명→1만 4949명→1만 2515명→1만 1436명→1만
+            718명→1만 274명으로, 일 평균 1만 1347명이다. 실내마스크 착용 의무
             해제에도 코로나19 유행의 감소세가 계속되면서 19일 확진자가 1만명
             대로 줄었다. 중앙방역대책본부는 이날 0시 기준 코로나19 확진자가 1만
             274명 증가했다고 밝혔다. 누적 확진자는 3042만 9571명이 됐다. 이날
@@ -41,34 +92,22 @@ export default function Page2() {
             13일부터 이날까지 일주일간 하루 신규 확진자 수는 5168명→1만
             4368명→1만 4949명→1만 2515명→1만 1436명→1만 718명→1만 274명으로, 일
             평균 1만 1347명이다. 실내마스크 착용 의무 해제에도 코로나19 유행의
-            감소세가 계속되면서 19일 확진자가 1만명 대로 줄었다.
-            중앙방역대책본부는 이날 0시 기준 코로나19 확진자가 1만 274명
-            증가했다고 밝혔다. 누적 확진자는 3042만 9571명이 됐다. 이날 신규
-            확진자 수는 1주 전인 지난 12일(1만 2042명)보다 1768명, 2주 전인 지난
-            5일(1만 4011명)보다 3737명 각각 적었다. 일요일 발표 기준으로는
-            지난해 7월 3일(1만 36명) 이후 33주 만에 가장 적은 기록이다. 지난
-            13일부터 이날까지 일주일간 하루 신규 확진자 수는 5168명→1만
-            4368명→1만 4949명→1만 2515명→1만 1436명→1만 718명→1만 274명으로, 일
-            평균 1만 1347명이다. 실내마스크 착용 의무 해제에도 코로나19 유행의
-            감소세가 계속되면서 19일 확진자가 1만명 대로 줄었다.
-            중앙방역대책본부는 이날 0시 기준 코로나19 확진자가 1만 274명
-            증가했다고 밝혔다. 누적 확진자는 3042만 9571명이 됐다. 이날 신규
-            확진자 수는 1주 전인 지난 12일(1만 2042명)보다 1768명, 2주 전인 지난
-            5일(1만 4011명)보다 3737명 각각 적었다. 일요일 발표 기준으로는
-            지난해 7월 3일(1만 36명) 이후 33주 만에 가장 적은 기록이다. 지난
-            13일부터 이날까지 일주일간 하루 신규 확진자 수는 5168명→1만
-            4368명→1만 4949명→1만 2515명→1만 1436명→1만 718명→1만 274명으로, 일
-            평균 1만 1347명이다.
+            감소세가
+            <img src={logo} alt="" className="img2" /> 계속되면서 19일 확진자가
+            1만명 대로 줄었다. 중앙방역대책본부는 이날 0시 기준 코로나19
+            확진자가 1만 274명 증가했다고 밝혔다. 누적 확진자는 3042만 9571명이
+            됐다. 이날 신규 확진자 수는 1주 전인 지난 12일(1만 2042명)보다
+            1768명, 2주 전인 지난 5일(1만 4011명)보다 3737명 각각 적었다. 일요일
+            발표 기준으로는 지난해 7월 3일(1만 36명) 이후 33주 만에 가장 적은
+            기록이다. 지난 13일부터 이날까지 일주일간 하루 신규 확진자 수는
+            5168명→1만 4368명→1만 4949명→1만 2515명→1만 1436명→1만 718명→1만
+            274명으로, 일 평균 1만 1347명이다.
           </div>
           <button className="button">
-            <Link to={"/"} className="link"></Link>
-            확인
+            <Link to={"/"} className="link">
+              확인
+            </Link>
           </button>
-        </div>
-        <div className="side">
-          <img src={logo} alt="" className="img" />
-          <span className="side__decs">가게이름</span>
-          <span className="side__decs">업종</span>
         </div>
       </div>
     </>
