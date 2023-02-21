@@ -1,12 +1,10 @@
 .main {
   background-color: white;
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-bottom: 50px;
+  margin: 50px;
   padding: 50px;
   display: flex;
   flex-direction: column;
-  flex: 9;
+  flex: 10;
   border-radius: 30px;
 }
 
@@ -19,13 +17,14 @@
   display: flex;
   flex: 2;
   flex-direction: column;
+  background-color: rgb(202, 202, 202);
 }
 
 .page2 {
   display: flex;
-  background-color: rgb(202, 202, 202);
-  min-width: 100vw;
-  min-height: 100vh;
+  background-color: rgb(221, 221, 221);
+  min-width: calc(100vw-50px);
+  height: 886px;
 }
 
 .img {
@@ -80,4 +79,41 @@
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+.img2 {
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+}
+
+.category {
+  margin: 10px;
+  margin-left: 70px;
+  margin-top: 20px;
+  vertical-align: middle;
+  align-items: center;
+  font-weight: bold;
+}
+
+.SNS {
+  margin-left: 50px;
+}
+
+.SNS > img {
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  margin: 10px;
+}
+
+.side__bar {
+  margin-top: 20px;
+}
+
+.side__plus {
+  display: flex;
+  flex: 5;
 }

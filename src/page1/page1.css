@@ -12,7 +12,6 @@
   display: flex;
   margin: 0 auto;
   width: 100px;
-  margin-top: 200px;
   animation-name: logo-hover;
   animation-duration: 2000ms;
   animation-timing-function: ease-in-out;
@@ -71,7 +70,7 @@
 
   background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
   background-position: 13px center;
-  background-size: contain;
+  background-size: 40px;
   background-repeat: no-repeat;
   border: 1px solid rgb(190, 190, 190);
   border-radius: 20px;
@@ -97,7 +96,7 @@
 
   border: none;
   border-radius: 10px;
-  background-color: rgb(97, 164, 93);
+  background-color: rgb(120, 122, 145);
   color: azure;
   align-items: center;
   justify-content: center;
@@ -106,4 +105,28 @@
 .link {
   text-decoration: none;
   color: inherit;
+}
+.swiper-container {
+  background-position: center;
+  background-size: cover;
+  width: 90vw;
+  margin-top: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #d8d9cf;
+}
+
+.header {
+  font-size: 50px;
+  margin: auto 0;
 }
