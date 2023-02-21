@@ -38,13 +38,17 @@ export default function Page2() {
             다시 생성하기
           </div>
           <div className="side__plus">
-            다른 리뷰 사이트를 이용해보세요! 네이버 플레이스 이외의 숨고,
-            카카오맵, 구글맵, 배달의 민족 등 다양한 리뷰 URL을 입력하시면 더욱
-            다양한 게시글을 생성할 수 있습니다.
+            <span>다른 리뷰 사이트를 이용해보세요!</span>
+            <span>네이버 플레이스 이외의 </span>
+            <span>숨고,카카오맵, 구글맵, 배달의 민족 등 </span>
+            <span>다양한 리뷰 URL을 </span>
+            <span>입력하시면 더욱</span>
+            <span>다양한 게시글을 생성할 수 있습니다.</span>
           </div>
         </div>
         <div className="main">
-          <div className="title">제목</div>
+          <span className="title">추천제목 | </span>
+          <span className="date">생성날짜 |</span>
           <hr className="bar"></hr>
           <div className="desc">
             전기사에게 택배와 세탁물 심부름을 시키고 명절이나 휴가 중에도 운전을

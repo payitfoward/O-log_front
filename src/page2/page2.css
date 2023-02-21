@@ -10,7 +10,8 @@
 
 .title {
   font-size: 40px;
-  text-align: center;
+  margin-left: 50px;
+  font-family: "IBM Plex Sans KR", sans-serif;
 }
 
 .side {
@@ -46,6 +47,7 @@
   column-gap: 40px;
   font-size: 16px;
   flex: 2;
+  font-family: "IBM Plex Sans KR", sans-serif;
 }
 
 .side__decs {
@@ -70,7 +72,7 @@
 
   border: none;
   border-radius: 10px;
-  background-color: rgb(97, 164, 93);
+  background-color: rgb(120, 122, 145);
   color: azure;
   align-items: center;
   justify-content: center;
@@ -114,6 +116,14 @@
 }
 
 .side__plus {
+  margin-top: 300px;
   display: flex;
-  flex: 5;
+  flex-direction: column;
+  text-align: center;
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.date {
+  margin-left: 53px;
+  font-size: 25px;
 }
