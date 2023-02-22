@@ -81,6 +81,8 @@
 
 .inputUrl:focus {
   border-color: black;
+  text-indent: 70px;
+  padding-left: 45px;
 }
 
 .submit {

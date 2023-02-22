@@ -5,6 +5,7 @@ import logo2 from "./logo2.png";
 import logo3 from "./logo3.png";
 import banner from "./banner.png";
 import banner2 from "./banner2.png";
+import banner3 from "./banner3.png";
 import "./page1.css";
 
 // Import Swiper React components
@@ -50,7 +51,7 @@ export default function Page1() {
             <img src={banner2} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={logo3} alt="" />
+            <img src={banner3} alt="" />
           </SwiperSlide>
         </Swiper>
       </div>
