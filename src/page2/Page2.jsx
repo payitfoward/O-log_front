@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./page2.css";
-import logo from "./logo3.png";
 import { Link } from "react-router-dom";
 import TopBar from "../component/topbar/TopBar";
 import facebook from "./facebook.png";
@@ -8,9 +7,6 @@ import home from "./home.png";
 import instar from "./instargram.png";
 import tistory from "./tistory.png";
 import retry from "./retry.png";
-import jen from "./jen.jpg";
-import store from "./store.jpg";
-import Loading from "../loading/Loading";
 
 export default function Page2(response) {
   const dateNow = new Date();
@@ -63,10 +59,10 @@ export default function Page2(response) {
           </div>
         </div>
         <div className="main">
-          <span className="title">추천제목 | {response.title}</span>
+          <span className="title">추천제목 | {response.data.result.title}</span>
           <span className="date">생성날짜 | {today}</span>
           <hr className="bar"></hr>
-          <div className="desc">{response.desc}</div>
+          <div className="desc"></div>
           <button className="button">
             <Link to={"/"} className="link">
               확인

@@ -4,9 +4,10 @@ import Page2 from "../page2/Page2";
 
 export default function Result(response) {
   const [loading, setLoading] = useState(true);
+  console.log("response", response);
 
   useEffect(() => {
-    if (response.desc === undefined) {
+    if (response.data === undefined) {
       setLoading(true);
     } else {
       setLoading(false);
@@ -14,6 +15,6 @@ export default function Result(response) {
     // setTimeout(() => {
     //   setLoading(false);
     // }, 10000);
-  });
+  }, []);
   return <div>{loading ? <Loading /> : <Page2 response={response} />}</div>;
 }

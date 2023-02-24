@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import TopBar from "../component/topbar/TopBar";
 import axios from "axios";
 import Result from "../result/Result";
+import Loading from "../loading/Loading";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -28,10 +29,16 @@ export default function Page1() {
     e.preventDefault();
     // 백과 연동하는 부분
     try {
-      const res = await axios.post("", {
-        url: url,
+      console.log(url);
+
+      const res = await axios.post("/", {
+        url,
       });
+      console.log("res", res);
+      console.log("res.data", res.data);
+      console.log("res.data.result", res.data.result);
       <Result response={res || false} />;
+      window.location.replace("/result");
     } catch (err) {}
   };
 
@@ -69,9 +76,7 @@ export default function Page1() {
           onChange={(e) => setUrl(e.target.value)}
         />
         <button type="submit" className="button">
-          <Link className="link" to="/result">
-            URL 입력
-          </Link>
+          URL 입력
         </button>
       </form>
     </div>
