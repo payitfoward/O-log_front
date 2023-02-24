@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo1 from "./logo1.png";
-import logo2 from "./logo2.png";
-import logo3 from "./logo3.png";
 import banner from "./banner.png";
 import banner2 from "./banner2.png";
 import banner3 from "./banner3.png";
@@ -19,6 +16,8 @@ import SwiperCore from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import TopBar from "../component/topbar/TopBar";
+import axios from "axios";
+import Result from "../result/Result";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -28,6 +27,12 @@ export default function Page1() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // 백과 연동하는 부분
+    try {
+      const res = await axios.post("", {
+        url: url,
+      });
+      <Result response={res || false} />;
+    } catch (err) {}
   };
 
   return (
