@@ -21,7 +21,7 @@ export default function Page2(response) {
   // const res2 = response.desc.substring(len / 2, len);
 
   useEffect(() => {});
-
+  const data = response.response.result;
   return (
     <>
       <TopBar />
@@ -59,10 +59,16 @@ export default function Page2(response) {
           </div>
         </div>
         <div className="main">
-          <span className="title">추천제목 | {response.data.result.title}</span>
+          <span className="title">추천제목 | {data.title}</span>
           <span className="date">생성날짜 | {today}</span>
           <hr className="bar"></hr>
-          <div className="desc"></div>
+          <div className="desc">
+            <img className="img2" src={data.img[0]}></img>
+            {data.desc.map((d) => (
+              <span>{d}</span>
+            ))}
+            <img className="img2" src={data.img[1]} />
+          </div>
           <button className="button">
             <Link to={"/"} className="link">
               확인

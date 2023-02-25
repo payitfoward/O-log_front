@@ -25,22 +25,17 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 export default function Page1() {
   const [url, setUrl] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // 백과 연동하는 부분
-    try {
-      console.log(url);
-
-      const res = await axios.post("/", {
-        url,
-      });
-      console.log("res", res);
-      console.log("res.data", res.data);
-      console.log("res.data.result", res.data.result);
-      <Result response={res || false} />;
-      window.location.replace("/result");
-    } catch (err) {}
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   // 백과 연동하는 부분
+  //   try {
+  //     <Result response={url} />;
+  //     console.log(url);
+  //     setTimeout(() => {
+  //       window.location.replace("/result");
+  //     }, 2000);
+  //   } catch (err) {}
+  // };
 
   return (
     <div>
@@ -68,7 +63,7 @@ export default function Page1() {
         </Swiper>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           className="inputUrl"
           type="text"
@@ -76,7 +71,9 @@ export default function Page1() {
           onChange={(e) => setUrl(e.target.value)}
         />
         <button type="submit" className="button">
-          URL 입력
+          <Link to="/result" state={{ url: url }}>
+            URL 입력
+          </Link>
         </button>
       </form>
     </div>
