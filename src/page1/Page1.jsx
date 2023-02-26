@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo1 from "./logo1.png";
-import logo2 from "./logo2.png";
-import logo3 from "./logo3.png";
 import banner from "./banner.png";
 import banner2 from "./banner2.png";
+import banner3 from "./banner3.png";
 import "./page1.css";
 
 // Import Swiper React components
@@ -18,16 +16,26 @@ import SwiperCore from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import TopBar from "../component/topbar/TopBar";
+import axios from "axios";
+import Result from "../result/Result";
+import Loading from "../loading/Loading";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export default function Page1() {
   const [url, setUrl] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // 백과 연동하는 부분
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   // 백과 연동하는 부분
+  //   try {
+  //     <Result response={url} />;
+  //     console.log(url);
+  //     setTimeout(() => {
+  //       window.location.replace("/result");
+  //     }, 2000);
+  //   } catch (err) {}
+  // };
 
   return (
     <div>
@@ -50,12 +58,12 @@ export default function Page1() {
             <img src={banner2} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={logo3} alt="" />
+            <img src={banner3} alt="" />
           </SwiperSlide>
         </Swiper>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           className="inputUrl"
           type="text"
@@ -63,7 +71,7 @@ export default function Page1() {
           onChange={(e) => setUrl(e.target.value)}
         />
         <button type="submit" className="button">
-          <Link className="link" to="/result">
+          <Link to="/result" state={{ url: url }}>
             URL 입력
           </Link>
         </button>
